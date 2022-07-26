@@ -1,0 +1,22 @@
+$background: lighten(hsl(213, 19%, 18%), 10%);
+$background-hover: hsl(25, 97%, 53%);
+
+.container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  &__numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $background;
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    &:hover {
+      background: $background-hover;
+      cursor: pointer;
+    }
+  }
+}

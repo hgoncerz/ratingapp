@@ -1,6 +1,8 @@
 import React from "react";
 import "../sass/homesass/home.scss";
 
+import Numbers from "./Numbers";
+
 const Home = () => {
   return (
     <div className="wrap__home">
@@ -19,8 +21,8 @@ const Home = () => {
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <div className="wrap__home__content__numbers">1 2 3 4 5</div>
-        <button>SUBMIT</button>
+        <Numbers />
+        <button className="wrap__home__content__button">SUBMIT</button>
       </div>
     </div>
   );
