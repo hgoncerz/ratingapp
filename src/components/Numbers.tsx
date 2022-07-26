@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import "../sass/homesass/numbers.scss";
 
-const numbers: number[] = [1, 2, 3, 4, 5];
-const [chosenNumber, setChosenNumber] = useState<number>(5);
+import { Props } from "./Home";
 
-const Numbers = () => {
+const Numbers: React.FC<Props> = ({ chosenNumber, setChosenNumber }) => {
+  const numbers: number[] = [1, 2, 3, 4, 5];
+
   return (
     <div className="container">
       {numbers.map((number, index) => (
-        <div className="container__numbers" key={index}>
-          {number}
+        <div className="" key={index} onClick={() => setChosenNumber(number)}>
+          {number === chosenNumber ? (
+            <div className="container__numbers__chosen">{number}</div>
+          ) : (
+            <div className="container__numbers">{number}</div>
+          )}
         </div>
       ))}
     </div>

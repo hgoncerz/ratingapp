@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./sass/app.scss";
 import Home from "./components/Home";
 
 function App() {
+  const [chosenNumber, setChosenNumber] = useState<number>();
   return (
     <div className="App">
-      <Home />
+      <Home chosenNumber={chosenNumber} setChosenNumber={setChosenNumber} />
     </div>
   );
 }

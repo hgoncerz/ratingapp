@@ -3,7 +3,12 @@ import "../sass/homesass/home.scss";
 
 import Numbers from "./Numbers";
 
-const Home = () => {
+export interface Props {
+  chosenNumber: number | undefined;
+  setChosenNumber: React.Dispatch<React.SetStateAction<number | undefined>>;
+}
+
+const Home: React.FC<Props> = ({ chosenNumber, setChosenNumber }) => {
   return (
     <div className="wrap__home">
       <div className="wrap__home__content">
@@ -21,7 +26,10 @@ const Home = () => {
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <Numbers />
+        <Numbers
+          chosenNumber={chosenNumber}
+          setChosenNumber={setChosenNumber}
+        />
         <button className="wrap__home__content__button">SUBMIT</button>
       </div>
     </div>

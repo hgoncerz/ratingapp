@@ -1,5 +1,6 @@
 $background: lighten(hsl(213, 19%, 18%), 10%);
 $background-hover: hsl(25, 97%, 53%);
+$background-chosen: gray;
 
 .container {
   display: grid;
@@ -17,6 +18,15 @@ $background-hover: hsl(25, 97%, 53%);
     &:hover {
       background: $background-hover;
       cursor: pointer;
+    }
+    &__chosen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $background-chosen;
+      width: 45px;
+      height: 45px;
+      border-radius: 25px;
     }
   }
 }
