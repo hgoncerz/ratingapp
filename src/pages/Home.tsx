@@ -1,7 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../sass/homesass/home.scss";
 
-import Numbers from "./Numbers";
+import Numbers from "../components/Numbers";
 
 export interface Props {
   chosenNumber: number | undefined;
@@ -9,6 +10,8 @@ export interface Props {
 }
 
 const Home: React.FC<Props> = ({ chosenNumber, setChosenNumber }) => {
+  let navigate = useNavigate();
+
   return (
     <div className="wrap__home">
       <div className="wrap__home__content">
@@ -30,7 +33,12 @@ const Home: React.FC<Props> = ({ chosenNumber, setChosenNumber }) => {
           chosenNumber={chosenNumber}
           setChosenNumber={setChosenNumber}
         />
-        <button className="wrap__home__content__button">SUBMIT</button>
+        <button
+          className="wrap__home__content__button"
+          onClick={() => navigate("/result")}
+        >
+          SUBMIT
+        </button>
       </div>
     </div>
   );

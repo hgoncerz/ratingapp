@@ -1,13 +1,31 @@
 import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./sass/app.scss";
-import Home from "./components/Home";
+import Home from "./pages/Home";
+import ResultPage from "./pages/ResultPage";
 
 function App() {
   const [chosenNumber, setChosenNumber] = useState<number>();
   return (
-    <div className="App">
-      <Home chosenNumber={chosenNumber} setChosenNumber={setChosenNumber} />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                chosenNumber={chosenNumber}
+                setChosenNumber={setChosenNumber}
+              />
+            }
+          />
+          <Route
+            path="result"
+            element={<ResultPage chosenNumber={chosenNumber} />}
+          />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

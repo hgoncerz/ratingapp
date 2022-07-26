@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../sass/homesass/numbers.scss";
 
-import { Props } from "./Home";
+import { Props } from "../pages/Home";
 
 const Numbers: React.FC<Props> = ({ chosenNumber, setChosenNumber }) => {
   const numbers: number[] = [1, 2, 3, 4, 5];
