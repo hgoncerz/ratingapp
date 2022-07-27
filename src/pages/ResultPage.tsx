@@ -101,11 +101,14 @@ const ResultPage: React.FC<Props> = ({ chosenNumber }) => {
             </g>
           </svg>
         </div>
-        <p>You selected {chosenNumber} out of 5</p>
+        <div className="wrap__result__content__p">
+          <p>You selected {chosenNumber} out of 5</p>
+        </div>
+
         <h1>Thank you!</h1>
-        <p>
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, don't hesitate to get in touch!
+        <p className="wrap__result__content__p2">
+          We appreciate you taking the time to give a rating. <br /> If you ever
+          need more support, don't hesitate to <br /> get in touch!
         </p>
       </div>
     </div>

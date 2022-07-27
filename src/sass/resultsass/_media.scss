@@ -1,0 +1,26 @@
+@media screen and (max-width: 430px) {
+  .wrap__result {
+    width: 335px;
+    height: 350px;
+    padding: 20px;
+    &__content__p p {
+      margin-bottom: 15px;
+    }
+    &__content h1 {
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    &__content__p2 br {
+      display: none;
+    }
+  }
+}
+
+//   h1 {
+//     font-size: 24px;
+//     margin-top: 15px;
+//   }
+//   p {
+//     margin-bottom: 15px;
+//   }

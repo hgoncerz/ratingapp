@@ -1,6 +1,6 @@
 $background: lighten(hsl(213, 19%, 18%), 10%);
 $background-hover: hsl(25, 97%, 53%);
-$background-chosen: gray;
+$background-chosen: lighten(gray, 20%);
 
 .container {
   display: grid;
@@ -15,6 +15,7 @@ $background-chosen: gray;
     width: 45px;
     height: 45px;
     border-radius: 25px;
+    color: darken(white, 30%);
     &:hover {
       background: $background-hover;
       cursor: pointer;
@@ -27,6 +28,15 @@ $background-chosen: gray;
       width: 45px;
       height: 45px;
       border-radius: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    &__numbers {
+      width: 40px;
+      height: 40px;
     }
   }
 }

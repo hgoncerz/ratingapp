@@ -4,7 +4,7 @@ $background-button: hsl(25, 97%, 53%);
 .wrap__home {
   color: white;
   width: 400px;
-  height: 370px;
+  height: 390px;
   background: $background;
   border-radius: 20px;
   padding: 25px;
@@ -26,6 +26,7 @@ $background-button: hsl(25, 97%, 53%);
     & p {
       font-weight: 100;
       margin-bottom: 25px;
+      line-height: 1.6;
     }
     &__button {
       background: $background-button;
@@ -36,6 +37,8 @@ $background-button: hsl(25, 97%, 53%);
       margin-top: 25px;
       letter-spacing: 1.6px;
       font-weight: 500;
+      border: none;
+      outline: none;
 
       &:hover {
         background: white;
@@ -44,3 +47,4 @@ $background-button: hsl(25, 97%, 53%);
     }
   }
 }
+@import "mobile";
